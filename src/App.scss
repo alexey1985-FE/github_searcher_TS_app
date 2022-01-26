@@ -1,0 +1,65 @@
+.App {
+	text-align: center;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 50px auto;
+}
+
+input {
+	width: 50%;
+	min-width: 200px;
+	padding: 0 20px;
+	height: 50px;
+}
+
+.users-list {
+	margin-top: 50px;
+}
+
+.items {
+	display: flex;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	margin: 0 auto;
+	max-width: 50%;
+	padding: 17px;
+	cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  &:last-child {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #000;
+  }
+
+  &__repo  {
+    display: flex;
+    flex-direction: column;
+    span {
+      margin-bottom: 10px;
+      display: inline-flex;
+    }
+  }
+}
+
+.user-title {
+	align-self: center;
+	margin: 0 auto;
+}
+
+.user {
+	display: flex;
+	margin-top: 50px;
+	justify-content: center;
+	margin-bottom: 50px;
+
+	&__info {
+		margin-left: 50px;
+		h3 {
+			margin-bottom: 10px;
+		}
+	}
+}
+

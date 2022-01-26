@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.scss';
+import UserItemPage from './components/UserItemPage';
+import UsersSearchList from './components/UsersSearchList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App: FC = () => {
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<h2>Github Searcher</h2>
+				<Routes>
+					<Route
+						path={'/'}
+						element={
+							<UsersSearchList 
+                id={0} 
+                login={''} 
+                avatar_url={''} 
+                public_repos={0} 
+              />
+						}
+					></Route>
+					<Route
+						path={'/users/:id'}
+						element={
+							<UserItemPage
+								email={''}
+								location={''}
+								created_at={''}
+								followers={0}
+								following={0}
+								id={0}
+								login={''}
+								avatar_url={''}
+								bio={''}
+								public_repos={0}
+							/>
+						}
+					></Route>
+				</Routes>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
