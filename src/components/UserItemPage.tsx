@@ -65,7 +65,7 @@ const UserItemPage: FC<IUser> = () => {
 	}, []);
 
 	return (
-		<>
+		<div className='container'>
 			<div className="user">
 				<div>
 					<img src={user?.avatar_url} width={300} height={300} alt="avatar" />
@@ -80,7 +80,7 @@ const UserItemPage: FC<IUser> = () => {
 				</div>
 			</div>
 			<div>{user?.bio}</div>
-			<form className="container">
+			<form>
 				<input
 					type="search"
 					placeholder="Search for User's Repositories"
@@ -97,7 +97,7 @@ const UserItemPage: FC<IUser> = () => {
 					repos.map(repo => <RepoItem repo={repo} key={repo.name} />)
 				)}
 			</div>
-		</>
+		</div>
 	);
 };
 

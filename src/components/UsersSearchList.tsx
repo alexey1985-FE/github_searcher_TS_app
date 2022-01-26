@@ -30,7 +30,8 @@ const UsersSearchList: FC<IUsers> = () => {
 	useEffect(() => {
 		if (debouncedSearchTerm) {
 			try {
-				axiosInstance.get(`/search/users?&q=${searchInput}&per_page=100`)
+				axiosInstance
+					.get(`/search/users?&q=${searchInput}&per_page=100`)
 					.then(response => setUsers(response.data.items));
 				setIsLoading(false);
 			} catch (err) {
@@ -50,19 +51,18 @@ const UsersSearchList: FC<IUsers> = () => {
 					value={searchInput}
 				/>
 			</form>
-			<div className="users-list">
-				{isLoading ? (
-					<h2>Loading...</h2>
-				) : (
-					users.map(user => (
-						<UserItem
-							key={user.id}
-							user={user}
-							onClick={() => navigate(`/users/${user.login}`)}
-						/>
-					))
-				)}
-			</div>
+      
+			{isLoading ? (
+				<h2>Loading...</h2>
+			) : (
+				users.map(user => (
+					<UserItem
+						key={user.id}
+						user={user}
+						onClick={() => navigate(`/users/${user.login}`)}
+					/>
+				))
+			)}
 		</div>
 	);
 };
