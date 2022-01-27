@@ -13,12 +13,7 @@ const App: FC = () => {
 					<Route
 						path={'/'}
 						element={
-							<UsersSearchList 
-                id={0} 
-                login={''} 
-                avatar_url={''} 
-                public_repos={0} 
-              />
+							<UsersSearchList id={0} login={''} avatar_url={''} public_repos={0} />
 						}
 					></Route>
 					<Route
@@ -42,6 +37,6 @@ const App: FC = () => {
 			</div>
 		</HashRouter>
 	);
-}
+};
 
 export default App;
