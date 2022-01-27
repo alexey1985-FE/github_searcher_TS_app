@@ -79,7 +79,7 @@ const UserItemPage: FC<IUser> = () => {
 					<h3>Following: {user?.following}</h3>
 				</div>
 			</div>
-			<div>{user?.bio}</div>
+			<p>{user?.bio}</p>
 			<form>
 				<input
 					type="search"
