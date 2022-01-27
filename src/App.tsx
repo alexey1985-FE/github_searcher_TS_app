@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import UserItemPage from './components/UserItemPage';
 import UsersSearchList from './components/UsersSearchList';
 
 const App: FC = () => {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<div className="App">
 				<h2>Github Searcher</h2>
 				<Routes>
@@ -40,7 +40,7 @@ const App: FC = () => {
 					></Route>
 				</Routes>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
