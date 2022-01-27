@@ -23,7 +23,7 @@ const UsersSearchList: FC<IUsers> = () => {
 		if (e.target.value === '') {
 			setUsers([]);
 			setIsLoading(false);
-			localStorage.removeItem('userName');
+			localStorage.clear();
 		}
 	};
 
@@ -51,7 +51,7 @@ const UsersSearchList: FC<IUsers> = () => {
 					value={searchInput}
 				/>
 			</form>
-      
+
 			{isLoading ? (
 				<h2>Loading...</h2>
 			) : (
