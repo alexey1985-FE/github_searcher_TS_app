@@ -5,7 +5,7 @@ import UserItemPage from './components/UserItemPage';
 import UsersSearchList from './components/UsersSearchList';
 
 const App: FC = () => {
-	return (
+   return (
 		<HashRouter>
 			<div className="App">
 				<h2>Github Searcher</h2>
